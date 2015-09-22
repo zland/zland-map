@@ -1,0 +1,105 @@
+/*!
+ * Copyright 2015 Florian Biewald
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+$canvas-wrapper-z-index: 100;
+$canvas-z-index: 102;
+$player-z-index: 104;
+
+@import "zland-core/sass/no-selection";
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    overflow: hidden;
+    @include no-selection;
+}
+
+.canvas-wrapper {
+    height: 100%;
+    overflow: hidden;
+    z-index: $canvas-wrapper-z-index;
+    position: relative;
+    @include no-selection;
+}
+
+.map-canvas {
+    z-index: $canvas-z-index;
+    overflow: hidden;
+    position: absolute;
+    @include no-selection;
+}
+
+#canvas {
+    position: absolute;
+    z-index: $canvas-z-index;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    @include no-selection;
+}
+
+.playground {
+    z-index: $player-z-index;
+    overflow: hidden;
+    position: absolute;
+    border: 1px solid pink;
+    @include no-selection;
+}
+
+
+/* buttons */
+#shoot-btn {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: $player-z-index;
+    height: 80px;
+}
+
+.marker {
+    position: absolute;
+    /* z-index: $player-z-index+10;
+    width: 10px;
+    height: 10px;
+    background-color: pink; */
+}
+
+.debug-explanation {
+  position: absolute;
+  z-index: 106;
+  color: white;
+  right: 10%;
+  width: 30%;
+}
+
+.testspot {
+  position: absolute;
+  background-color: yellow;
+  width: 10px;
+  height: 10px;
+}

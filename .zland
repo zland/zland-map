@@ -1,0 +1,43 @@
+{
+  "name": "Map",
+  "entryPoint": "map",
+  "resolveAlias": "map",
+  "author": "Florian Biewald",
+  "canvasStoreValues": {
+    "position": {
+      "method": "getMapPosition()",
+      "store": "stores/MapStore"
+    },
+    "positionPixel": {
+      "method": "getMapPositionPixel()",
+      "store": "stores/MapStore"
+    },
+    "heading": {
+      "method": "getMapHeading()",
+      "store": "stores/MapStore"
+    },
+    "moveDiffX": {
+      "method": "getMoveDiffX()",
+      "store": "stores/MapStore"
+    },
+    "moveDiffY": {
+      "method": "getMoveDiffY()",
+      "store": "stores/MapStore"
+    },
+    "overallMoveDiffX": {
+      "method": "getOverallMoveDiffX()",
+      "store": "stores/MapStore"
+    },
+    "overallMoveDiffY": {
+      "method": "getOverallMoveDiffY()",
+      "store": "stores/MapStore"
+    },
+    "hasStableGps": {
+      "method": "hasStableGps()",
+      "store": "stores/MapStore"
+    }
+  },
+  "canvasStores": [
+    "stores/MapStore"
+  ]
+}
